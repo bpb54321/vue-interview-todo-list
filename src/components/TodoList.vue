@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { type Todo } from "@/types/Todo"
-import TodoItem from "./TodoItem.vue";
+import TodoItem from "@/components/TodoItem.vue";
+import AddTodoForm from "@/components/AddTodoForm.vue"
 const todos: Todo[] = [
   {
     title: "Faire mes valises",
@@ -21,4 +22,5 @@ const todos: Todo[] = [
   <ul>
     <TodoItem v-for="todo in todos" :key="todo.id" :todo="todo"/>
   </ul>
+  <AddTodoForm />
 </template>
